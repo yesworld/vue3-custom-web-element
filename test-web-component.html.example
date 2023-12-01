@@ -1,0 +1,11 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Vite + Vue + TS</title>
+    <script src="dist/simple-sample.js" ></script>
+</head>
+<body>
+
+    <simple-sample msg="23"></simple-sample>
+</body>
+</html>
