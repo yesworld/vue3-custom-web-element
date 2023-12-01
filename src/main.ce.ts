@@ -1,6 +1,6 @@
 import { defineCustomElement } from 'vue'
-import SimpleSampleComponent from './SimpleSample.vue'
+import VueWebCustomElement from './VueWebCustomElement.vue'
 
-const SimpleSample = defineCustomElement(SimpleSampleComponent)
+const webCustomElement = defineCustomElement(VueWebCustomElement)
 
-customElements.define('simple-sample', SimpleSample)
+customElements.define('vue-web-custom-element', webCustomElement)

@@ -1,19 +1,17 @@
 <script setup lang="ts">
-
 defineProps({
   msg: {
-    default: 'Hi!'
+    default: 'Hi from Custom element!'
   }
 })
-
 </script>
 
 <template>
-  <h1 class="read-the-docs">{{ msg }}</h1>
+  <h1 class="title">{{ msg }}</h1>
 </template>
 
 <style scoped>
-.read-the-docs {
+.title {
   color: #888;
 }
 </style>

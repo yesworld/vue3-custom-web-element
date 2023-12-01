@@ -16,12 +16,15 @@ export default defineConfig({
   build: {
     lib: {
       entry: './src/main.ce.ts',
-      name: 'simple-sample',
+      name: 'vue-web-custom-element',
       // the proper extensions will be added
-      fileName: 'simple-sample'
+      fileName: 'vue-web-custom-element'
     }
   },
   define: {
-    'process.env': process.env
+    // 'process.env': process.env
+    'process': {
+      env: process.env.NODE_ENV
+    }
   }
 })

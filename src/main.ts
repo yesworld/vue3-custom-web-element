@@ -1,8 +1,5 @@
 import { createApp } from 'vue'
 import './style.css'
-// import App from './App.vue'
+import VueWebCustomElement from './VueWebCustomElement.vue'
 
-// createApp(App).mount('#app')
-import SimpleSample from "./SimpleSample.vue";
-
-createApp(SimpleSample).mount('#app')
+createApp(VueWebCustomElement).mount('#app')
