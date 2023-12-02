@@ -1,12 +1,18 @@
 {
-  "name": "vue3-splite1",
+  "name": "vue3-web-custom-element",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.0.1",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+
+    "dev:app1": "VITE_APP=app1 vite",
+    "build:app1": "VITE_APP=app1 vite build",
+
+    "dev:app2": "VITE_APP=app2 vite",
+    "build:app2": "VITE_APP=app2 vite build"
   },
   "dependencies": {
     "vue": "^3.3.8"

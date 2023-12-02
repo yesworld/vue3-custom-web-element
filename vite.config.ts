@@ -1,7 +1,12 @@
+import { resolve } from 'path'
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 
+const application = process.env.VITE_APP ? process.env.VITE_APP : 'default'
+console.log(application)
+
 export default defineConfig({
+  root: 'src/'+application,
   plugins: [
     vue(
       {
@@ -14,10 +19,11 @@ export default defineConfig({
     )
   ],
   build: {
+    outDir: resolve(__dirname, `./dist/${application}`),
+
     lib: {
-      entry: './src/main.ce.ts',
+      entry: `./main.ce.ts`,
       name: 'vue-web-custom-element',
-      // the proper extensions will be added
       fileName: 'vue-web-custom-element'
     }
   },
