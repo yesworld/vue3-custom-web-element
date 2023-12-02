@@ -3,4 +3,4 @@ import VueWebCustomElement from './VueWebCustomElement.vue'
 
 const webCustomElement = defineCustomElement(VueWebCustomElement)
 
-customElements.define('vue-web-custom-element', webCustomElement)
+customElements.define('vue-web-custom-element-a', webCustomElement)

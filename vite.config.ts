@@ -20,17 +20,17 @@ export default defineConfig({
   ],
   build: {
     outDir: resolve(__dirname, `./dist/${application}`),
-
+    // minify: 'esbuild',
     lib: {
       entry: `./main.ce.ts`,
       name: 'vue-web-custom-element',
       fileName: 'vue-web-custom-element'
-    }
+    },
   },
   define: {
-    // 'process.env': process.env
-    'process': {
-      env: process.env.NODE_ENV
-    }
+    'process.env': {}
+    // 'process': {
+    //   env: process.env.NODE_ENV
+    // }
   }
 })
