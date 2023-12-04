@@ -2,7 +2,13 @@ import { resolve } from 'path'
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 
-const application = process.env.VITE_APP ? process.env.VITE_APP : 'default'
+const command = process.env.npm_lifecycle_event.split(':')
+
+if (!command[1]) {
+  throw new Error('Incorrect script syntax. [environment]:[name_project]');
+}
+
+const application = command[1]
 
 export default defineConfig({
   root: 'src/'+application,

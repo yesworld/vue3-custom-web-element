@@ -4,9 +4,9 @@
   "version": "0.0.2",
   "type": "module",
   "scripts": {
-    "dev:app1": "VITE_APP=app1 vite",
+    "dev:app1": "vite",
     "build:app1": "vue-tsc --noEmit && VITE_APP=app1 vite build",
-    "dev:app2": "VITE_APP=app2 vite",
+    "dev:app2": "vite",
     "build:app2": "vue-tsc --noEmit && VITE_APP=app2 vite build"
   },
   "dependencies": {
