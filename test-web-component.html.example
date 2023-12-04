@@ -5,7 +5,6 @@
     <script src="dist/app1/vue-web-custom-element.js"></script>
 </head>
 <body>
-
     <vue-web-custom-element msg="Hello!"></vue-web-custom-element>
 </body>
 </html>
