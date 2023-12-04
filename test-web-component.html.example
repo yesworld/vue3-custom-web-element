@@ -2,10 +2,10 @@
 <html lang="en">
 <head>
     <title>Vite + Vue + TS</title>
-    <script src="dist/vue-web-custom-element.js" ></script>
+    <script src="dist/app1/vue-web-custom-element.js"></script>
 </head>
 <body>
 
-    <vue-web-custom-element msg="23"></vue-web-custom-element>
+    <vue-web-custom-element msg="Hello!"></vue-web-custom-element>
 </body>
 </html>

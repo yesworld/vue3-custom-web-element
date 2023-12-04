@@ -3,7 +3,6 @@ import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 
 const application = process.env.VITE_APP ? process.env.VITE_APP : 'default'
-console.log(application)
 
 export default defineConfig({
   root: 'src/'+application,
