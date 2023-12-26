@@ -18,6 +18,43 @@ Build:
 npm run build:app1
 ```
 
+## Troubleshoot
+
+### With vue3
+```shell
+Uncaught TypeError: Failed to resolve module specifier "vue". Relative references must start with either "/", "./", or "../".
+```
+
+[https://stackoverflow.com/questions/52612446/importing-a-package-in-es6-failed-to-resolve-module-specifier-vue](https://stackoverflow.com/questions/52612446/importing-a-package-in-es6-failed-to-resolve-module-specifier-vue):
+```html
+<script type="importmap">
+  { "imports": {
+      "vue":        "https://cdnjs.cloudflare.com/ajax/libs/vue/3.2.41/vue.esm-browser.prod.js",
+      "vue-router": "https://cdnjs.cloudflare.com/ajax/libs/vue-router/4.1.5/vue-router.esm-browser.min.js"
+  } }
+</script>
+```
+
+### Without vue3
+Make sure to also externalize any dependencies that you do not want to bundle into your library, e.g. **vue** or **react**.
+Add external to config **vite.config.ts**.
+
+[https://vitejs.dev/guide/build#library-mode](https://vitejs.dev/guide/build#library-mode)
+```ts
+{
+  // other code...
+  rollupOptions: {
+    external: ['vue'],
+      output: {
+      globals: {
+        vue: 'Vue',
+      }
+    }
+  },
+}
+
+```
+
 ## Create example file 
 Gitignore patter: **test-*.html**
 
